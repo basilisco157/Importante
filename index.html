@@ -1,0 +1,65 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Vai ter cuzin hoje?</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      position: relative;
+      background-color: #ffffff;
+    }
+    
+    h1 {
+      margin-bottom: 20px;
+      font-size: 24px;
+      color: #000000;
+    }
+    
+    .button-container {
+      display: flex;
+    }
+    
+    button {
+      margin: 10px;
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #eaeaea;
+      color: #000000;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    function redirecionarYouTube() {
+      window.location.href = "https://youtu.be/KXw8CRapg7k";
+    }
+    
+    function moverBotao() {
+      var buttonNo = document.getElementById("button-no");
+      var bodyWidth = document.body.offsetWidth;
+      var bodyHeight = document.body.offsetHeight;
+      var randomLeft = Math.floor(Math.random() * (bodyWidth - 100));
+      var randomTop = Math.floor(Math.random() * (bodyHeight - 100));
+      
+      buttonNo.style.position = "absolute";
+      buttonNo.style.left = randomLeft + "px";
+      buttonNo.style.top = randomTop + "px";
+    }
+  </script>
+</head>
+<body>
+  <h1>Vai ter cuzin hoje?</h1>
+  <div class="button-container">
+    <button type="button" onclick="redirecionarYouTube()">Sim</button>
+    <button type="button" id="button-no" onclick="moverBotao()">Não</button>
+  </div>
+</body>
+</html>
